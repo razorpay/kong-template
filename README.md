@@ -1,4 +1,4 @@
-# kong-island
+# kong-template
 dev-test setup for kong, the cloud-native API gateway.
 
 # Description
@@ -17,20 +17,20 @@ This setup helps to develop and test multiple kong plugins. It uses [kong-pongo]
 # Directories
 The repo has the following important directories:
 
-- [kong-plugins](https://github.com/Abhishekvrshny/kong-island/tree/master/kong-plugins): This is a repository of all kong custom plugins. Some of them can be `submodule`d from other public git repositories.
+- [kong-plugins](https://github.com/razorpay/kong-template/tree/master/kong-plugins): This is a repository of all kong custom plugins. Some of them can be `submodule`d from other public git repositories.
 - [kong-pongo](https://github.com/Kong/kong-pongo): Tooling to run plugin tests with Kong.
 
 # Setup
 Clone master branch  with submodules
 ```sh
-git clone --recurse-submodules -j8 https://github.com/Abhishekvrshny/kong-island
-cd kong-island
+git clone --recurse-submodules -j8 https://github.com/razorpay/kong-template
+cd kong-template
 ```
 
 To fetch a specific branch
 ```sh
-git clone https://github.com/Abhishekvrshny/kong-island
-cd kong-island
+git clone https://github.com/razorpay/kong-template
+cd kong-template
 git fetch origin <branch>
 git submodule init
 git submodule update
@@ -77,10 +77,10 @@ make down
 
 # Plugin development
 
-All plugins are available under [kong-plugins dir](https://github.com/Abhishekvrshny/kong-island/tree/master/kong-plugins).
+All plugins are available under [kong-plugins dir](https://github.com/razorpay/kong-template/tree/master/kong-plugins).
 
 ## Including an open-source plugin
-Add the open-source plugin as a submodule in `kong-island`
+Add the open-source plugin as a submodule in `kong-template`
 ```sh
 git submodule add http://github.com/Kong/kong-plugin
 ```
@@ -127,7 +127,7 @@ kong reload
 
 ## Enabling the plugin
 
-Right now, the steps to enable a plugin in the `kong-island` container image are manual. This is not automated, as of now, as number of plugins are handful.
+Right now, the steps to enable a plugin in the `kong-template` container image are manual. This is not automated, as of now, as number of plugins are handful.
 
 Edit the `kong.conf` configuration file to make the following changes
 
