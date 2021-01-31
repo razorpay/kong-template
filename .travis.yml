@@ -1,0 +1,10 @@
+dist: bionic
+
+jobs:
+  include:
+          - name: kong
+
+script:
+- make init
+- make lint
+- make test
