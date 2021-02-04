@@ -1,5 +1,5 @@
 # kong-template
-dev-test setup for kong, the cloud-native API gateway.
+A template repository for getting started with Kong, the cloud-native API gateway.
 
 # Description
 This setup helps to develop and test multiple kong plugins. It uses [kong-pongo](https://github.com/Kong/kong-pongo) to run tests against the plugins and [konga](https://github.com/pantsel/konga) for dashboard.
@@ -60,13 +60,13 @@ To change `KONG_VERSION`
 1. Change `KONG_VERSION` in `Makefile`
 2. Export the updated `KONG_VERSION` environment variable.
 3. Update the kong image version in Dockerfile i.e `FROM kong:2.0.x`
- 
+
 Bring up kong, cassandra and konga
 ```sh
 make up
 # Access kong at http://127.0.0.1:8000/
 # Access kong admin API at http://127.0.0.1:8001/
-# Access konga at http://127.0.0.1:1337/ 
+# Access konga at http://127.0.0.1:1337/
 # Default user credentials for konga: root/root123
 ```
 
